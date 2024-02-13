@@ -1,11 +1,11 @@
-FROM debian:bookworm
+FROM debian:11
 
-RUN apt -y update 
-RUN apt -y upgrade 
-RUN apt install -y nginx
+RUN apt-get -y update 
+RUN apt-get -y upgrade 
+RUN apt-get install -y nginx
 
 RUN mkdir -p /etc/nginx/ssl
-RUN apt install -y openssl
+RUN apt-get install -y openssl
 
 RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/nginx/ssl/inception.key -subj "/C=FR/CN=aascedu.42.fr"
 
