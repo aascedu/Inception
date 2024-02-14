@@ -4,10 +4,9 @@ networks:
     name: inception
     driver: bridge
 
-
 services:
   mariadb:
-    container_name: maria_db
+    container_name: mariadb
     networks:
       - inception
     build:
