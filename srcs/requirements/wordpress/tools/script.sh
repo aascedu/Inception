@@ -16,12 +16,11 @@ wp config create	--allow-root \
                     --dbhost=mariadb:3306 \
                     --path=/var/www/html
 
-# CHANGER URL
 wp core install     --allow-root \
                     --url=aascedu.42.fr \
                     --admin_user=$SQL_USER \
                     --admin_password=$SQL_PASSWORD \
-                    --admin_email=whwh@wh.com \
+                    --admin_email=aascedu@student.42lyon.fr \
                     --title=Inception \
                     --path=/var/www/html
 fi

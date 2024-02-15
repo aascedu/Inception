@@ -6,7 +6,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y php7.4 php-fpm php-mysql mariadb-client
 # RUN wget https://fr.wordpress.org/wordpress-6.4.2-fr_FR.tar.gz -P /var/www
 # RUN cd /var/www && tar -xzf wordpress-6.4.2-fr_FR.tar.gz && rm wordpress-6.4.2-fr_FR.tar.gz
-# RUN chown -R root:root /var/www/wordpress
+RUN mkdir -p /var/www/html/ && chown -R root:root /var/www/html
 # RUN cp /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php
 
 
@@ -17,4 +17,8 @@ RUN wget https://github.com/wp-cli/wp-cli-bundle/releases/download/v2.7.0/wp-cli
 COPY conf/www.conf /etc/php/7.4/fpm/pool.d/www.conf
 COPY tools/script.sh /usr/local/bin/script_php.sh
 RUN chmod +x /usr/local/bin/script_php.sh
+# RUN chmod 777 -R /var/www/html/wp-upload
+# RUN chmod 777 -R /var/www/html
+# RUN sh /usr/local/bin/script_php.sh
+# CMD ["/bin/bash"]
 CMD ["./usr/local/bin/script_php.sh"]
