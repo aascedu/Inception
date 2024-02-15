@@ -23,6 +23,6 @@ volumes:
 
 clean:
 	$(COMPOSE) $(COMPOSE_SRC) down --volumes --rmi all
-	rm -rf /home/aascedu/data/mariadb /home/aascedu/data/mariadb
+	rm -rf /home/aascedu/data/mariadb /home/aascedu/data/wordpress
 
 .PHONY: all volumes clean up down
