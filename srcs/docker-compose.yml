@@ -15,8 +15,10 @@ services:
       args:
         SQL_DATABASE: $SQL_DATABASE
         SQL_ROOT_PASSWORD: $SQL_ROOT_PASSWORD
+        SQL_ADMIN: $SQL_ADMIN
+        SQL_ADMINPASSWD: $SQL_ADMINPASSWD
         SQL_USER: $SQL_USER
-        SQL_PASSWORD: $SQL_PASSWORD
+        SQL_USERPASSWD: $SQL_USERPASSWD
     env_file: .env
     volumes:
       - mariadb:/var/lib/mysql

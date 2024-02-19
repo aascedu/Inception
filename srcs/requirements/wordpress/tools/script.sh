@@ -7,17 +7,23 @@ wp core download --path=/var/www/html \
 
 wp config create	--allow-root \
                     --dbname=$SQL_DATABASE \
-                    --dbuser=$SQL_USER \
-                    --dbpass=$SQL_PASSWORD \
+                    --dbuser=$SQL_ADMIN \
+                    --dbpass=$SQL_ADMINPASSWD \
                     --dbhost=mariadb:3306 \
                     --path=/var/www/html
 
 wp core install     --allow-root \
                     --url=$DOMAIN_NAME \
-                    --admin_user=$SQL_USER \
-                    --admin_password=$SQL_PASSWORD \
+                    --admin_user=$SQL_ADMIN \
+                    --admin_password=$SQL_ADMINPASSWD \
                     --admin_email=aascedu@student.42lyon.fr \
                     --title=Inception \
+                    --path=/var/www/html
+
+wp user create      --allow-root \
+                    $SQL_USER \
+                    example@example.com \
+                    --user_pass=$SQL_USERPASSWD \
                     --path=/var/www/html
 
 fi

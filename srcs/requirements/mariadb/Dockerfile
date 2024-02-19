@@ -6,13 +6,17 @@ RUN apt-get -y update && \
 
 ARG SQL_DATABASE
 ARG SQL_ROOT_PASSWORD
+ARG SQL_ADMIN
+ARG SQL_ADMINPASSWD
 ARG SQL_USER
-ARG SQL_PASSWORD
+ARG SQL_USERPASSWD
 
 RUN export SQL_DATABASE=SQL_DATABASE && \
     export SQL_ROOT_PASSWORD=SQL_ROOT_PASSWORD && \
+    export SQL_ADMIN=SQL_ADMIN && \
+    export SQL_ADMINPASSWD=SQL_ADMINPASSWD && \
     export SQL_USER=SQL_USER && \
-    export SQL_PASSWORD=SQL_PASSWORD
+    export SQL_USERPASSWD=SQL_USERPASSWD
 
 COPY conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 COPY tools/mysql_script.sh /etc/mysql/mysql_script.sh
