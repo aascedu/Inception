@@ -2,9 +2,9 @@
 
 # Inception
 
-![frontpage](https://i.imgur.com/PnnmJda.png)
-
 This project is an Administration System related exercise.
+
+![frontpage](https://i.imgur.com/PnnmJda.png)
 
 </center>
 
