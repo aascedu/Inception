@@ -48,7 +48,7 @@ It should output something like this:
 
 then access this url :
 ```shell
- https://aascedu.42.fr
+https://aascedu.42.fr
 ```
 
 **2. Special Make Rules**
