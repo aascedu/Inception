@@ -2,7 +2,7 @@
 
 # Inception
 
-![frontpage](https://imgur.com/wpsTnLn)
+![frontpage](https://i.imgur.com/PnnmJda.png)
 
 This project is an Administration System related exercise.
 
@@ -43,6 +43,7 @@ $ sudo make
 ```
 
 It should output something like this:
+
 ![built](https://i.imgur.com/8jb6umJ.png)
 
 then access this url :
