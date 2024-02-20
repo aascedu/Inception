@@ -43,7 +43,7 @@ $ sudo make
 ```
 
 It should output something like this:
-![built](https://imgur.com/a/xdRy93C)
+![built](https://i.imgur.com/8jb6umJ.png)
 
 then access this url :
 ```shell
